@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="EN" xml:lang="en">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="HpvviicMWhb8qb4OHY38FvwcKyyvMjMM0e_8bpa2ofMAC6CjPMHslHF8cWm2Purt6lycOvPTcE59XUsiQ01tyA" />
+    
+    <link rel="icon" type="image/x-icon" href="/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--a741eef73e2ef297975a6797de5804c47319dc76/favicon-48x48.png?locale=uk" />
+    <title>ZeroWaste</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/application-bb83e1e8ea9444e4e02048f157c2b46ea8d914e1a00e6bcbbfbf74e25966a7c5.css" media="all" data-turbo-track="reload" />
+    <link rel="stylesheet" href="/assets/tailwind-e121dcbe63c24ed3e33d7b78e79e17c95b4d57216ee98bff4be4210052ea9cf3.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="/assets/inter-font-8c3e82affb176f4bca9616b838d906343d1251adc8408efe02cf2b1e4fcf2bc4.css" data-turbo-track="reload" />
+    <script type="importmap" data-turbo-track="reload">{
+  "imports": {
+    "@rails/request.js": "/assets/requestjs-13ced64208a33e47e021c56d9a91f73507b5b58de492ee7c169ec578898b2e6c.js",
+    "application": "/assets/application-7eddd099edfddf660d70443eb9ba8d2787176c1c517ab08403f88dcbc5733866.js",
+    "@hotwired/turbo-rails": "/assets/turbo.min-f309baafa3ae5ad6ccee3e7362118b87678d792db8e8ab466c4fa284dd3a4700.js",
+    "@hotwired/stimulus": "/assets/stimulus.min-d03cf1dff41d6c5698ec2c5d6a501615a7a33754dbeef8d1edd31c928d17c652.js",
+    "@hotwired/stimulus-loading": "/assets/stimulus-loading-1fc59770fb1654500044afd3f5f6d7d00800e5be36746d55b94a2963a7a228aa.js",
+    "bootstrap": "https://ga.jspm.io/npm:bootstrap@5.3.0/dist/js/bootstrap.esm.js",
+    "@fortawesome/fontawesome-free": "https://ga.jspm.io/npm:@fortawesome/fontawesome-free@6.4.0/js/all.js",
+    "@popperjs/core": "https://ga.jspm.io/npm:@popperjs/core@2.11.8/lib/index.js",
+    "@rails/actioncable": "/assets/actioncable.esm-642a147cbb90e93c6f2bcaeeb817a4a263aa4f971a6d95795835270bd8519dfd.js",
+    "toastify-js": "https://ga.jspm.io/npm:toastify-js@1.12.0/src/toastify.js",
+    "controllers/application": "/assets/controllers/application-e4006907e21e3ab0126280bc32522cbb5d89e1857b64cf4849b7e5c01ea3313a.js",
+    "controllers/burger_controller": "/assets/controllers/burger_controller-870db91e6265c7aa30485233ce0d9bda529e2af4df406ec2f2bed53415d04192.js",
+    "controllers/handle_browser_tab_controller": "/assets/controllers/handle_browser_tab_controller-e11f96a604b2fe7ed3817d5ebd65e640c96fb8b0db283af04ea07c80f5dca9af.js",
+    "controllers": "/assets/controllers/index-2db729dddcc5b979110e98de4b6720f83f91a123172e87281d5a58410fc43806.js",
+    "controllers/input_child_info_controller": "/assets/controllers/input_child_info_controller-bc2c3695ea86735c0c9208f4863ad2a71d3fb596404bdfdfe448d1d8c999db92.js",
+    "controllers/loader_controller": "/assets/controllers/loader_controller-7a507ee98dd905e8d61a38fcaa989c21cb190bdfc4153a52d0ea076e56f31c8b.js",
+    "controllers/password_visibility_controller": "/assets/controllers/password_visibility_controller-56136c51d047bf89c62823c6c4e73a39f6078b6b68697c6a7957925d9e931338.js",
+    "controllers/price_form_controller": "/assets/controllers/price_form_controller-b0a8921c7bfea6df53566bf82869a311d3c71b30df79b4c6b1dd5dcd2a2dc8aa.js",
+    "controllers/results_controller": "/assets/controllers/results_controller-d46ed8363947a5a40aa598bac7ffb6d23de9a85ad6688ca731bbca2e265e6a48.js",
+    "controllers/stimulus_application": "/assets/controllers/stimulus_application-a665f2d36152acf808833a9ef11a086df76940fdb55882475e3879268a358dab.js",
+    "channels/consumer": "/assets/channels/consumer-b0ce945e7ae055dba9cceb062a47080dd9c7794a600762c19d38dbde3ba8ff0d.js",
+    "channels": "/assets/channels/index-5245f8c2362983a98c8558936d9e6323ca952cfe4782e687c2f4814bc91fe950.js",
+    "turbo_streams/toast": "/assets/turbo_streams/toast-95c79ed45ef982219f2f014c34ab48a75f8edeaa752d536eb883668556d65d5d.js",
+    "helpers/toast_helper": "/assets/helpers/toast_helper-21ace87fd72963f90bf26ee52da478f20c27509aca5dfe40b51928183d3fb7f8.js"
+  }
+}</script>
+<link rel="modulepreload" href="/assets/application-7eddd099edfddf660d70443eb9ba8d2787176c1c517ab08403f88dcbc5733866.js">
+<link rel="modulepreload" href="/assets/turbo.min-f309baafa3ae5ad6ccee3e7362118b87678d792db8e8ab466c4fa284dd3a4700.js">
+<link rel="modulepreload" href="/assets/stimulus.min-d03cf1dff41d6c5698ec2c5d6a501615a7a33754dbeef8d1edd31c928d17c652.js">
+<link rel="modulepreload" href="/assets/stimulus-loading-1fc59770fb1654500044afd3f5f6d7d00800e5be36746d55b94a2963a7a228aa.js">
+<link rel="modulepreload" href="https://ga.jspm.io/npm:bootstrap@5.3.0/dist/js/bootstrap.esm.js">
+<link rel="modulepreload" href="https://ga.jspm.io/npm:@fortawesome/fontawesome-free@6.4.0/js/all.js">
+<link rel="modulepreload" href="https://ga.jspm.io/npm:@popperjs/core@2.11.8/lib/index.js">
+<link rel="modulepreload" href="/assets/actioncable.esm-642a147cbb90e93c6f2bcaeeb817a4a263aa4f971a6d95795835270bd8519dfd.js">
+<link rel="modulepreload" href="https://ga.jspm.io/npm:toastify-js@1.12.0/src/toastify.js">
+<script src="/assets/es-module-shims.min-4ca9b3dd5e434131e3bb4b0c1d7dff3bfd4035672a5086deec6f73979a49be73.js" async="async" data-turbo-track="reload"></script>
+<script type="module">import "application"</script>
+  </head>
+  <body>
+    <div class="body-inside">
+      
+      <header class="page-header">
+  <div data-controller="burger" class="flex justify-between w-full">
+    <a class="logo-zerowaste" href="/uk"><img alt="Zero Waste Logo" src="/assets/logo_zerowaste-82d5fb226eecd08239cc77dc113ab1fa4e03c1d2c461db31caa58e4f96c591c2.png" /></a>
+    <div data-burger-target="navbarNav" class="hidden xl:flex flex-1">
+      <ul class="admin-menu-list items-start xl:items-center">
+        <li>
+            <a class="tab-main-page" href="/uk/calculator">Калькулятор підгузків</a>
+        </li>
+        <li>
+          <a class="tab-main-page" href="/uk/about-us">Про нас</a>
+        </li>
+        <li>        
+          <a class="tab-main-page" href="/uk/messages/new">Зв&#39;яжіться з нами</a>
+        </li>
+      </ul>
+            
+      <div class="admin-menu-list">
+        <a target="_blank" rel="noopener" class="header-btns main-btn btn-outline-green" href="https://zerowastelviv.org.ua/pidtrymaty/">Підтримати</a>
+        <a class="header-btns main-btn btn-outline-gray" href="/en/calculator">English</a>    
+      </div> 
+    </div>
+    <div class="flex ml-auto">
+      <div class="mt-6">
+        <button data-action="click->burger#toggle" class="admin-menu-burger-button">
+          <img class="block h-8 w-8" data-burger-target="iconLines" src="/assets/icons/burger-menu-lines-a4fd5c2aedbe8b65407a67ab87aadb4e975df9f190e4a3711d432336dc1541b7.svg" />
+          <img class="block h-8 w-8 hidden" data-burger-target="iconCross" src="/assets/icons/burger-menu-cross-7ac2998b8fa0cbac4439ee3eadd8e347004beb8d244b07f722ba74a35350b4c3.svg" />
+        </button>
+      </div> 
+    </div> 
+  </div>   
+</header>
+
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol class="inline-flex items-center">
+    <a href="/uk">Головна</a><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="#D3D3D3" class="size-6 z-1 h-4 px-2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+</svg>
+Калькулятор підгузків
+  </ol>
+</nav>
+
+      <div class="rounded jumbotron jumbotron-fluid position-relative">
+  <h1 class="pt-6 text-2xl font-semibold text-center text-success">Калькулятор підгузків</h1>
+  <div class="flex-wrap d-flex justify-content-around calculator_wrap ms-5">
+    <form class="simple_form simple_form_calculator" data-controller="input-child-info" data-input-child-info-url-value="https://calc.zerowastelviv.org.ua/uk/api/v1/diaper_calculators" data-input-child-info-months-value="[0,1,2,3,4,5,6,7,8,9,10,11]" data-input-child-info-results-outlet=".result" novalidate="novalidate" action="#" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="3kciwfsyQ2fwFWIdxUynm5n0mQ4XNJmdTOPnFglxLnW4t3d7HJke-EYMr64DxNpI-QQvRrip2NrA9C9PURfkMA" autocomplete="off" />
+      <div class="flex-item flex-column">
+        <div class="pb-2 input_lable">
+          <label for="child_years">Вік дитини:</label>
+        </div>
+
+        <div class="flex-row rounded flex-item w-100 age_wrapper form_fild">
+          <select class="select required select-age ms-2 rounded" data-input-child-info-target="year" data-action="input-child-info#yearChanged" name="child[years]" id="child_years"><option value="">__</option>
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option></select>
+
+          <label class="select-age-label" for="child_years">р.</label>
+
+          <select class="select required select-age rounded" data-input-child-info-target="month" name="child[months]" id="child_months"><option value="">__</option>
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option></select>
+
+          <label class="select-age-label" for="child_months">міс.</label>
+        </div>
+
+        <div class="pb-2 input_lable">
+          <label for="child_product_category">Цінова категорія</label>
+        </div>
+
+        <select selected="selected" label="<span class=&quot;translation_missing&quot; title=&quot;translation missing: uk.calculators.new_calculator.form_price&quot;>Form Price</span>" class="select required form_fild price_select rounded w-100" data-input-child-info-target="productCategory" name="child[product_category]" id="child_product_category"><option value="1">Бюджетна</option>
+<option selected="selected" value="2">Середня</option>
+<option value="3">Преміум</option></select>
+
+        <input type="submit" name="commit" value="Розрахувати" class="calculate-btn result-btn" data-action="input-child-info#submit" data-disable-with="Розрахувати" />
+      </div>
+</form>
+    <img class="scales_img" alt="Scales" src="/assets/scales-58896f4336bd853ca652c4d89bcb2c5e3d76fc5062266b296c339187d08d299e.png" />
+  </div>
+</div>
+
+<div class="jumbotron calculation-results result main-result-container result-container" data-controller="results">
+      <div>
+        <img class="img-margin" alt="icon" src="/assets/diapers_bought_2-90e0a8c8a59adaa4356bb94a835780d379a0e76df5aa65ee6a7517a4e6bd0c27.png" />
+        <p data-results-target="diapersUsed">0</p>
+        <p class="diapers-font">шт.</p>
+        <p class="diapers-font-text" data-results-target="boughtDiapersPluralize">ви вже використали</p>
+      </div>
+      <div class="vector-width">
+        <img class="vector" alt="horizontal arrow" src="/assets/icons/vector_5-e9d87d63a7832f390d3b1c9d76c0c1120a08411da30a5d3acc7a977385801666.png" />
+        <img class="vector-mobile" alt="vertical arrow" src="/assets/icons/vector_2-c964b5e86182f9882b43f2ce76ac1c54f876cbe658494ad6ffc1800b68fe1c88.png" />
+      </div>
+      <div>
+        <img class="img-margin" alt="icon" src="/assets/diapers_to_buy_2-dbcf4e49019426249199eb6de718d401881fb9656e6bfb73c4ae0864960e342b.png" />
+        <p data-results-target="diapersToBeUsed">0</p>
+        <p class="diapers-font">шт.</p>
+        <p class="diapers-font-text" data-results-target="willBuyDiapersPluralize">ви ще використаєте</p>
+      </div>
+      <div>
+        <img class="img-margin" alt="icon" src="/assets/money_spent_2-6d737206290e75a2069716ed12682a8e921b8fbf9e7ccc6b4d5a257c893d6bfe.png" />
+        <p data-results-target="moneySpent">0</p>
+        <p class="diapers-font">грн</p>
+        <p class="diapers-font-text" data-results-target="">ви вже витратили</p>
+      </div>
+      <div class="vector-width">
+        <img class="vector" alt="horizontal arrow" src="/assets/icons/vector_5-e9d87d63a7832f390d3b1c9d76c0c1120a08411da30a5d3acc7a977385801666.png" />
+        <img class="vector-mobile" alt="vertical arrow" src="/assets/icons/vector_2-c964b5e86182f9882b43f2ce76ac1c54f876cbe658494ad6ffc1800b68fe1c88.png" />
+      </div>
+      <div>
+        <img class="img-margin" alt="icon" src="/assets/money_to_spent_2-5908f9829cde42c1057dcdd560da2f2ed038f1fb5636d14b2f71378209cb6dc0.png" />
+        <p data-results-target="moneyWillBeSpent">0</p>
+        <p class="diapers-font">грн</p>
+        <p class="diapers-font-text" data-results-target="">ви ще витратите</p>
+      </div>
+</div>
+
+<div class="jumbotron calculation-results">
+  <div class="row">
+    <div class="col-xl-8 result-card">
+      <span><p data-type="description_block_html"></p>Ці результати є приблизними, точні цифри для вашої сімʼї можуть бути дещо іншими та залежать від ваших щоденних звичок та обраної марки підгузків. На будь-якому етапі користування підгузками є можливість зменшити рівень їхнього використання. Запрошуємо вас дізнатися більше про методи, як це можна зробити, та про достmупні багаторазові альтернативи одноразовим дитячим підгузкам. А ще ви можете почитати докладніше про те, <a target="_blank" href="https://zerowastelviv.org.ua/diaper-calculator-method/">як ми розраховуємо</a> кількість та вартість підгузків, або <a target="_blank" href="https://zerowastelviv.org.ua/kontakty/">написати нам</a>, якщо маєте інші запитання.</span>
+    </div>
+    <div class="col-sm result-card">
+      <button class="calculate-btn description-btn">
+        <a target="_blank" class="px-2" href="https://zerowastelviv.org.ua/zero-waste-nappies/">ЯК ЗМЕНШИТИ ВИКОРИСТАННЯ</a>
+      </button>
+    </div>
+  </div>
+</div>
+
+      
+    </div>
+  </body>
+</html>
