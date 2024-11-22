@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
+  <base href="/ZWReports_Unlighthouse/">
+  <script>
+    const isGithubPages = window.location.hostname.endsWith("github.io");
+    if (isGithubPages) {
+      const base = document.createElement("base");
+      base.href = "/ZWReports_Unlighthouse/";
+      document.head.appendChild(base);
+    }
+  </script>
+  
   <style>button[disabled] {
   opacity: 0.5;
   cursor: not-allowed;
