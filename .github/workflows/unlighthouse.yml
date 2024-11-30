@@ -15,14 +15,12 @@ jobs:
         run: |
           npm install -g @unlighthouse/cli puppeteer
           sudo apt-get update && sudo apt-get install ruby -y
-      - name: Ensure Output Directory Exists
-        run: mkdir -p .unlighthouse/dist
 
       - name: Unlighthouse Assertions and Client
         run: unlighthouse-ci --site http://51.44.25.104/en --build-static --output-path .unlighthouse/dist
 
       - name: Convert JSON to CSV
-        run: ruby lib/convert_json_to_csv.rb .unlighthouse/dist/ci-result.json .unlighthouse/dist/ci-result.csv
+        run: ruby scripts/convert_json_to_csv.rb .unlighthouse/dist/ci-result.json .unlighthouse/dist/ci-result.csv
 
       - name: Upload Unlighthouse Report
         uses: actions/upload-artifact@v4
