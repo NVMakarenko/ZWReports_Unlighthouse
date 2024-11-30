@@ -1,0 +1,21 @@
+name: Assertions and static report
+
+on:
+  workflow_dispatch:
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Install Dependencies
+        run: npm add @unlighthouse/cli puppeteer
+
+      - name: Unlighthouse assertions and client
+        run: unlighthouse-ci --site http://51.44.25.104/en --build-static
+
+      - name: List generated report files
+        run: ls -R .unlighthouse/dist
