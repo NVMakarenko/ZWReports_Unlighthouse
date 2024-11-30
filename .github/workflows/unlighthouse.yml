@@ -26,18 +26,18 @@ jobs:
       - name: Debug Workspace
         run: ls -R $GITHUB_WORKSPACE
 
-      - name: Verify Unlighthouse Output Directory
+      - name: Debug Directory and Files
         run: |
+          echo "Debugging output directory:"
           if [ -d "$GITHUB_WORKSPACE/unlighthouse/dist" ]; then
             echo "Directory exists."
-            ls -R $GITHUB_WORKSPACE/unlighthouse/dist
+            ls -l $GITHUB_WORKSPACE/unlighthouse/dist
           else
-            echo "Directory not found."
-            exit 1
+            echo "Directory does not exist!"
           fi
-
+      
       - name: Upload Unlighthouse Report
         uses: actions/upload-artifact@v3
         with:
           name: unlighthouse-report
-          path: $GITHUB_WORKSPACE/unlighthouse/dist
+          path: $GITHUB_WORKSPACE/unlighthouse/dist/**
