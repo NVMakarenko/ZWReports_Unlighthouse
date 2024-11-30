@@ -22,52 +22,8 @@ jobs:
       - name: Unlighthouse Assertions and Client
         run: unlighthouse-ci --site http://51.44.25.104/en --build-static --output-path .unlighthouse/dist
 
-      - name: Add Ruby Script for JSON to CSV
-        run: |
-          echo "require 'json'
-          require 'caxlsx' # Замініть на 'axlsx', якщо використовуєте цей гем.
-          
-          # Метод для конвертації JSON у XLSX
-          def convert_json_to_xlsx(input_file, output_file)
-            begin
-              # Зчитуємо JSON-файл
-              json_data = JSON.parse(File.read(input_file))
-          
-              # Створюємо нову Excel-книгу
-              Axlsx::Package.new do |p|
-                # Додаємо лист
-                p.workbook.add_worksheet(name: "Sheet 1") do |sheet|
-                  # Додаємо заголовки (ключі першого елемента JSON)
-                  sheet.add_row json_data.first.keys
-          
-                  # Додаємо рядки (значення з JSON)
-                  json_data.each do |row|
-                    sheet.add_row row.values
-                  end
-                end
-          
-                # Зберігаємо файл
-                p.serialize(output_file)
-              end
-          
-              puts "XLSX file created successfully: #{output_file}"
-            rescue Errno::ENOENT
-              puts "File not found: #{input_file}"
-            rescue JSON::ParserError => e
-              puts "Error parsing JSON: #{e.message}"
-            end
-          end
-          
-          # Виклик методу
-          input_file = './data.json' # Вкажіть шлях до JSON
-          output_file = './data.xlsx' # Вкажіть шлях для збереження XLSX
-          convert_json_to_xlsx(input_file, output_file)
-
       - name: Process JSON to CSV
-        run: ruby convert_json_to_csv.rb
-
-      - name: Debug Processed Files
-        run: ls -R .unlighthouse/dist
+        run: ruby scripts/convert_json_to_csv.rb
 
       - name: Upload Unlighthouse Report
         uses: actions/upload-artifact@v3
