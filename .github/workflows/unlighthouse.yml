@@ -16,8 +16,11 @@ jobs:
       - name: Create dist directory
         run: mkdir -p $GITHUB_WORKSPACE/.unlighthouse/dist
 
+      - name: List all directories
+        run: ls -R $GITHUB_WORKSPACE
+
       - name: Unlighthouse assertions and client
         run: unlighthouse-ci --site http://51.44.25.104/en --build-static
 
       - name: List generated report files
-        run: ls -R .unlighthouse/dist
+        run: ls -R $GITHUB_WORKSPACE/.unlighthouse/dist
