@@ -18,13 +18,23 @@ jobs:
         run: mkdir -p $GITHUB_WORKSPACE/unlighthouse/dist
 
       - name: Run Unlighthouse with Debug
-        run: unlighthouse-ci --site http://51.44.25.104/en --output-path $GITHUB_WORKSPACE/unlighthouse/dist || echo "Unlighthouse failed"
+        run: |
+          unlighthouse-ci --site http://51.44.25.104/en --output-path $GITHUB_WORKSPACE/unlighthouse/dist || echo "Unlighthouse failed"
+          echo "Contents of the output directory after Unlighthouse:"
+          ls -l $GITHUB_WORKSPACE/unlighthouse/dist
 
       - name: Debug Workspace
         run: ls -R $GITHUB_WORKSPACE
 
       - name: Verify Unlighthouse Output Directory
-        run: ls -R $GITHUB_WORKSPACE/unlighthouse/dist || echo "Directory not found"
+        run: |
+          if [ -d "$GITHUB_WORKSPACE/unlighthouse/dist" ]; then
+            echo "Directory exists."
+            ls -R $GITHUB_WORKSPACE/unlighthouse/dist
+          else
+            echo "Directory not found."
+            exit 1
+          fi
 
       - name: Upload Unlighthouse Report
         uses: actions/upload-artifact@v3
