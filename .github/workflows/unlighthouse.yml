@@ -14,7 +14,7 @@ jobs:
       - name: Install Dependencies
         run: npm install -g @unlighthouse/cli puppeteer
       - name: Create dist directory
-        run: mkdir -p $GITHUB_WORKSPACE/.unlighthouse/dist
+        run: mkdir -p $GITHUB_WORKSPACE/unlighthouse/dist
 
       - name: List all directories
         run: ls -R $GITHUB_WORKSPACE
@@ -23,4 +23,4 @@ jobs:
         run: unlighthouse-ci --site http://51.44.25.104/en --build-static
 
       - name: List generated report files
-        run: ls -R $GITHUB_WORKSPACE/.unlighthouse/dist
+        run: ls -R $GITHUB_WORKSPACE/unlighthouse/dist
