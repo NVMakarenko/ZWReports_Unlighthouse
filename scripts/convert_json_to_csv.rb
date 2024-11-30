@@ -1,4 +1,4 @@
-require 'json'
+echo "require 'json'
 require 'csv'
 
 input_file = '.unlighthouse/dist/ci-result.json'
@@ -11,9 +11,9 @@ begin
       csv << row.values
     end
   end
-  puts "CSV file created successfully: #{output_file}"
+  puts \"CSV file created successfully: #{output_file}\"
 rescue Errno::ENOENT
-  puts "File not found: #{input_file}"
+  puts \"File not found: #{input_file}\"
 rescue JSON::ParserError => e
-  puts "Error parsing JSON: #{e.message}"
-end
+  puts \"Error parsing JSON: #{e.message}\"
+end" > convert_json_to_csv.rb
