@@ -19,7 +19,7 @@ jobs:
 
       - name: Run Unlighthouse with Debug
         run: |
-          unlighthouse-ci --site http://51.44.25.104/en --output-path $GITHUB_WORKSPACE/unlighthouse/dist || echo "Unlighthouse failed"
+          npm unlighthouse --site http://51.44.25.104/en --build-static --output-path $GITHUB_WORKSPACE/unlighthouse/dist || echo "Unlighthouse failed"
           echo "Contents of the output directory after Unlighthouse:"
           ls -l $GITHUB_WORKSPACE/unlighthouse/dist
 
