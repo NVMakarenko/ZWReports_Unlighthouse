@@ -28,7 +28,7 @@ jobs:
         run: ls -R .unlighthouse/dist
 
       - name: Upload Unlighthouse Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: unlighthouse-report
           path: .unlighthouse/dist/**
