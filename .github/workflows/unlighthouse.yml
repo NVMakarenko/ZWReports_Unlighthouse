@@ -13,12 +13,15 @@ jobs:
 
       - name: Install Dependencies
         run: npm install -g @unlighthouse/cli puppeteer
-        
-      - name: Create dist directory
-        run: mkdir -p $GITHUB_WORKSPACE/unlighthouse/dist
 
-      - name: Unlighthouse assertions and client
+      - name: Run Unlighthouse
         run: unlighthouse-ci --site http://51.44.25.104/en --build-static --output-path $GITHUB_WORKSPACE/unlighthouse/dist
+
+      - name: Debug Workspace
+        run: ls -R $GITHUB_WORKSPACE
+
+      - name: Verify Unlighthouse Output Directory
+        run: ls -R $GITHUB_WORKSPACE/unlighthouse/dist || echo "Directory not found"
 
       - name: Upload Unlighthouse Report
         uses: actions/upload-artifact@v3
