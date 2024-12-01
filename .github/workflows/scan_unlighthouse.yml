@@ -24,7 +24,7 @@ jobs:
 
       - name: Convert JSON to CSV
         run: |
-            ruby -e "require './lib/convert_json_to_csv_service'; ConvertJsonToCsvService.call('.unlighthouse/dist/ci-result.json', '.unlighthouse/ci-result.csv')"
+            ruby -e "require './services/convert_json_to_csv_service'; ConvertJsonToCsvService.call('.unlighthouse/dist/ci-result.json', '.unlighthouse/ci-result.csv')"
 
       - name: Upload Unlighthouse Report
         uses: actions/upload-artifact@v4
