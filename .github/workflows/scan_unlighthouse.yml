@@ -22,9 +22,8 @@ jobs:
       - name: Unlighthouse Assertions and Client
         run: unlighthouse-ci --site http://51.44.25.104/en --build-static --output-path .unlighthouse/dist
 
-      - name: Convert JSON to CSV
-        run: |
-           ruby -e "$LOAD_PATH.unshift('./app/services'); require 'convert_json_to_csv'; ConvertJsonToCsvService.call('.unlighthouse/dist/ci-result.json', '.unlighthouse/ci-result.csv')"
+    - name: Convert JSON to CSV
+        run: ruby -e '$LOAD_PATH.unshift("./app/services"); require "convert_json_to_csv"; ConvertJsonToCsvService.call(".unlighthouse/dist/ci-result.json", ".unlighthouse/ci-result.csv")'
 
       - name: Upload Unlighthouse Report
         uses: actions/upload-artifact@v4
